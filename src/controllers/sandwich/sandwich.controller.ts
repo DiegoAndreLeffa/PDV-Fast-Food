@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { listAllSandwichsService } from "../../../../../../Nova pasta/services";
+import { listAllSandwichsService } from "../../services";
 
 export const getAllSandwichController = async (
   request: Request,
