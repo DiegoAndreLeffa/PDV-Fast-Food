@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { Extra } from "../../entities";
-import { AppDataSource } from "../../data-source";
+import { AppDataSource } from "../../dataSource";
 
 export const listAllExtraService = async () => {
   const extraRepository: Repository<Extra> = AppDataSource.getRepository(Extra);
