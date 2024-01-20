@@ -1,15 +1,4 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToMany,
-  JoinTable,
-  JoinColumn,
-  ManyToOne,
-} from "typeorm";
-import { Extra } from "../extra/extra.entity";
-import { Cart } from "../cart/cart.entity";
-
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 export enum SandwichCategory {
   Lanches = "Lanches",
   Combos = "Combos",

@@ -1,7 +1,6 @@
 import { Repository } from "typeorm";
-import { Extra, Sandwich } from "../../entities";
+import { Extra } from "../../entities";
 import { AppDataSource } from "../../data-source";
-import { sandwichReturnAllSchema } from "../../schemas";
 
 export const listAllExtraService = async () => {
   const extraRepository: Repository<Extra> = AppDataSource.getRepository(Extra);
