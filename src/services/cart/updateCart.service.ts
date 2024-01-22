@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { AppDataSource } from "../../dataSource";
+import { AppDataSource } from "../../data-source";
 import { Cart } from "../../entities";
 import { AppError } from "../../errors";
 

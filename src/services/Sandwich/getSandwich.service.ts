@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { Sandwich } from "../../entities";
-import { AppDataSource } from "../../dataSource";
+import { AppDataSource } from "../../data-source";
 import { sandwichReturnAllSchema } from "../../schemas";
 import { tSandwichResAll } from "../../interfaces";
 
