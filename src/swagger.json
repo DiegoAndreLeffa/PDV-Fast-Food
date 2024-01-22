@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PDV-Fast-Food",
+    "summary": "A fast food manager.",
+    "description": "Bem-vindo à documentação da API para o sistema de pedidos online de um restaurante fast food. Esta API, desenvolvida em TypeScript, permite que você acesse e gerencie recursos relacionados a sanduíches, extras, pedidos e muito mais.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Api teste"
+    },
+    {
+      "url": "https://fast-food-wc9y.onrender.com",
+      "description": "Api Produção"
+    }
+  ],
+  "paths": {
+    "/sandwich": {
+      "get": {
+        "summary": "Listagem dos itens",
+        "description": "Essa rota é responsável por listar todos os itens",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Lista de sanduíches"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/extra": {
+      "get": {
+        "summary": "Listagem dos extras",
+        "description": "Essa rota é responsável por listar todos os extras",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Lista de extras"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cart": {
+      "post": {
+        "summary": "Criação de carrinho",
+        "description": "Essa rota é responsável por criar um novo carrinho",
+        "tags": ["Cart"],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Novo carrinho criado"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Listagem dos carrinhos",
+        "description": "Essa rota é responsável por listar todos os carrinhos",
+        "tags": ["Cart"],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Lista de carrinhos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "summary": "Atualização de carrinho",
+        "description": "Essa rota é responsável por atualizar um carrinho existente",
+        "tags": ["Cart"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID do carrinho a ser atualizado",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Carrinho atualizado"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Exclusão de carrinho",
+        "description": "Essa rota é responsável por excluir um carrinho existente",
+        "tags": ["Cart"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "ID do carrinho a ser excluído",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": {
+                  "message": "Carrinho excluído"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
