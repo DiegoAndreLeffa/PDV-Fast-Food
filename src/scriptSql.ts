@@ -8,7 +8,8 @@ const pool = new Pool({
 const executeScript = async () => {
   try {
     // Leia o conteúdo do seu arquivo SQL
-    const sqlScript = fs.readFileSync("./db.sql", "utf8");
+    const path = require("path");
+    const sqlScript = fs.readFileSync(path.join(__dirname, "db.sql"), "utf8");
 
     // Conecte ao banco de dados e execute o script SQL
     await pool.query(sqlScript);
