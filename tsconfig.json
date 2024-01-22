@@ -12,8 +12,8 @@
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/**/*.sql"],
   "exclude": ["node_modules"]
 }

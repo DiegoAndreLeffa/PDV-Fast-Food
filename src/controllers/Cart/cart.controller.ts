@@ -10,6 +10,7 @@ export const postCartController = async (
   request: Request,
   response: Response
 ) => {
+  console.log(request.body);
   const newCart = await postCartService(request.body);
 
   return response.status(201).json(newCart);
